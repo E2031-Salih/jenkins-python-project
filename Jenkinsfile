@@ -42,8 +42,8 @@ pipeline{
         stage('build'){
             agent any
             steps{
-                sh "docker build -t <namespace>/<project-name> ."
-                sh "docker tag <namespace>/<project-name> <your-ecr-url>/<namespace>/<project-name>:latest"
+                sh "docker build -t jenkins/pipeline ."
+                sh "docker tag jenkins/pipeline 130917230501.dkr.ecr.us-east-1.amazonaws.com/jenkins/pipeline:latest"
             }
         }
     }
